@@ -59,6 +59,7 @@ public class Libro {
         if (nEjemplares > 0) {
             disponible = true;
             nEjemplaresPrestados++;
+	    nEjemplares--;
         } else {
             disponible = false;
         }
@@ -70,6 +71,7 @@ public class Libro {
         if (nEjemplaresPrestados > 0) {
             devolucion = true;
             nEjemplaresPrestados--;
+	    nEjemplares++;
         } else {
             devolucion = false;
         }
@@ -78,7 +80,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "El autor es " + autor + " el titulo es " + titulo + " el numero de ejmplares es " + nEjemplares
+        return "El autor es " + autor + " el titulo es " + titulo + " el numero de ejemplares es " + nEjemplares
                 + " y el numero de prestados es " + nEjemplaresPrestados;
     }
 
