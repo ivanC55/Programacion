@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejercicio18Octubre{
+public class ComunicandoConElMundo{
 public static void main(String args[]){
 	Scanner sc = new Scanner (System.in);
 	int op1=0;
