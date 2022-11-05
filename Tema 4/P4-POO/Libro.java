@@ -54,33 +54,39 @@ public class Libro {
     }
 
     // Metodos :
-    public boolean prestamo() {
+    public String prestamo() {
         boolean disponible = true;
         if (nEjemplares > 0) {
             disponible = true;
             nEjemplaresPrestados++;
 	    nEjemplares--;
+	    System.out.println(disponible);
+	    return "Hay ejemplares de "+titulo+" para prestamo.";
         } else {
             disponible = false;
+	    System.out.println(disponible);
+	    return "No hay ejemplares de "+titulo+" para prestamo.";
         }
-        return disponible;
     }
 
-    public boolean devolucion() {
+    public String devolucion() {
         boolean devolucion = true;
         if (nEjemplaresPrestados > 0) {
             devolucion = true;
             nEjemplaresPrestados--;
 	    nEjemplares++;
+	    System.out.println(devolucion);
+	    return "Gracias por devolver el ejemplar de "+titulo;
         } else {
             devolucion = false;
+	    System.out.println(devolucion);
+	    return "No hay ningun ejemplar de "+titulo+" para devolver.";
         }
-        return devolucion;
     }
 
     @Override
     public String toString() {
-        return "El autor es " + autor + " el titulo es " + titulo + " el numero de ejemplares es " + nEjemplares
+        return "El autor es " + autor + ", el titulo es " + titulo + ", el numero de ejemplares es " + nEjemplares
                 + " y el numero de prestados es " + nEjemplaresPrestados;
     }
 

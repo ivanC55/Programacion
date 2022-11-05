@@ -19,8 +19,8 @@ System.out.println(harry.devolucion());
 System.out.println(harry.toString());
 
 //Juego de Tronos
-juegoTronos.setTitulo("George R.R Martin");
-System.out.println(juegoTronos.getTitulo());
+juegoTronos.setAutor("George R.R Martin");
+System.out.println(juegoTronos.getAutor());
 
 juegoTronos.setNEjemplares(5);
 System.out.println(juegoTronos.getNEjemplares());
