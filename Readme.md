@@ -14,6 +14,7 @@ Lee bien lo que hay que hacer en las prácticas y cómo hay que organizar tu rep
 
 ## Waiting
 + ...
+P2-HolaMundo
 P3-JavaBasicsIO
 P4-POO
 ## DONE
