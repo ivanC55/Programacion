@@ -1,4 +1,6 @@
-Lee bien lo que hay que hacer en las prácticas y cómo hay que organizar tu repositorio.
+# Autor : Ivan Cerros Brioso
+# email : dawicerrosb@iescastelar.com
+# Modulos a revisar : Programacion
 
 # PRÁCTICAS:
 ## TO-DO
