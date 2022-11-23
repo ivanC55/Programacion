@@ -1,2 +1,2 @@
-Autor: Ivan Cerros Brioso
-![capturaComunicandoConElMundo](https://user-images.githubusercontent.com/114107549/200126302-61d8c240-61e1-4711-96fc-6ca11a4d7e32.png)
+//Autor: Ivan Cerros Brioso
+![captura](https://user-images.githubusercontent.com/114107549/203615610-9e3630b8-1307-401b-9a2d-716b8959b044.png)
