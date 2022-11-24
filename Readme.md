@@ -16,9 +16,10 @@
 
 ## Waiting
 + ...
-P2-HolaMundo
-P3-JavaBasicsIO
-P4-POO
++ P1-PracticaGit
++ P2-HolaMundo
++ P3-JavaBasicsIO
++ P4-POO
 ## DONE
 + ...
 
