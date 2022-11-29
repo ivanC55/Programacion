@@ -4,24 +4,20 @@
 
 # PRÁCTICAS:
 ## TO-DO
-+ P1-Git -> 0 (no hecha)
-+ P2-Hola Mundo -> 2 (el programa está bien, el resto nada)
-+ P2-JavaDoc
-+ P3-Java BasicIO
-+ P4-POO
++ P2-Hola Mundo -> 2 (el programa está bien, el resto nada) -> documentación
++ P2-JavaDoc -> captura y documentación. Asegurate que en la captura aparece que la clase la has hecho tú y un comentario de que hace la clase.
++ P3-Java BasicIO -> documetación
 + P5-Bucles y condicionales
 
 ## Working
 + ...
 
 ## Waiting
-+ ...
-+ P1-PracticaGit
-+ P2-HolaMundo
-+ P3-JavaBasicsIO
-+ P4-POO
++
+
 ## DONE
-+ ...
++ P1-Git -> 4 (sin documentación)
++ P4-POO (6). La nota es por el retraso. Se recomienda el uso anidado de constructores, esto es, el general llama a los más específicos.
 
 # EXÁMENES:
 + T4-POO:
