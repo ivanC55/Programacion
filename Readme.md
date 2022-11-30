@@ -13,7 +13,9 @@
 + ...
 
 ## Waiting
-+
++ P1-Git (Documentacion)
++ P2-HolaMundo (Documentacion)
++ P3-BasicIO (Documentacion)
 
 ## DONE
 + P1-Git -> 4 (sin documentación)
