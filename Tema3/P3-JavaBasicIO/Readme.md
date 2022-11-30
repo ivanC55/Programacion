@@ -1,4 +1,4 @@
-##//Autor: Ivan Cerros Brioso
+#Autor: Ivan Cerros Brioso
 + Creamos variables estaticas para cambiar el color del string,
 + una variable para rojo, otra para azul y la ultima para resetear al color 
 + por defecto.
