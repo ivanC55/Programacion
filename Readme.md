@@ -4,9 +4,6 @@
 
 # PRÁCTICAS:
 ## TO-DO
-+ P2-Hola Mundo -> 2 (el programa está bien, el resto nada) -> documentación
-+ P2-JavaDoc -> captura y documentación. Asegurate que en la captura aparece que la clase la has hecho tú y un comentario de que hace la clase.
-+ P3-Java BasicIO -> documetación
 + P5-Bucles y condicionales
 
 ## Working
@@ -14,6 +11,7 @@
 
 ## Waiting
 + P1-Git (Documentacion)
++ P2-JavaDoc
 + P2-HolaMundo (Documentacion)
 + P3-BasicIO (Documentacion)
 
