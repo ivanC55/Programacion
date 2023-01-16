@@ -1,4 +1,4 @@
-package Examenes.Tema6;
+//package Examenes.Tema6;
 /*
  * @Author: Ivan Cerros Brioso
  */
@@ -14,6 +14,7 @@ public class CodigoSecreto {
             int numeroAleatorio = (int) (Math.random() * 9 + 1);
             codigo[i] = numeroAleatorio;
         }
+        for(int i: codigo) { System.out.println("-"+i+"-"); }
     }
 
     public int[] convierteCodigo(String s) {

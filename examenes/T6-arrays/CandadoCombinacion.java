@@ -1,4 +1,4 @@
-package Examenes.Tema6;
+//package Examenes.Tema6;
 
 import java.util.Scanner;
 /*
@@ -20,8 +20,9 @@ public class CandadoCombinacion {
         while (salida != 4) {
             System.out.println("Dime un numero de " + dificultad + " digitos.");
             intento = sc.next();
-            numeroS.convierteCodigo(intento);
-            numeroS.pruebaCodigo(null);
+            int[] numIntento = numeroS.convierteCodigo(intento);
+            boolean acierto = numeroS.pruebaCodigo(numIntento);
+            if (acierto == true) break; // acerto todo el codigo
         }
 
     }
