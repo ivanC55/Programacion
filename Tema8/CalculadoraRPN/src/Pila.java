@@ -1,9 +1,9 @@
 import java.util.Stack;
-
+/*
+ * @Author: Ivan Cerros Brioso
+ * */
 public class Pila {
-
     Stack<Integer> pila = new Stack<Integer>();
-
     //Constructor :
     public Pila() {
     }
@@ -25,8 +25,17 @@ public class Pila {
         }
         return pila.pop();
     }
-
-    //
+    //Factorial n > 1 => f(n) = n * f(n-1);
+    // n = 1 => f(1) = 1;
+    public int factorial(){
+        int numero = pop();
+        int cuenta = 0;
+        for (int i = numero; i > 0 ; i--) {
+            cuenta = numero * i;
+        }
+        push(cuenta);
+        return cuenta;
+    }
     public int sumar() {
         int numero1 = pop();
         int numero2 = pop();

@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/*
+ * @Author: Ivan Cerros Brioso
+ * */
 public class CalculadoraRPN {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -7,17 +9,23 @@ public class CalculadoraRPN {
         String operacion;
         Pila pila = new Pila();
         System.out.println("Teclea la operacion: ");
-        operacion = "1 2 + 3 * 5 +";
+        operacion = sc.nextLine();
         String[] operacionSeparada = operacion.split(" ");
         //
         for (String espacio : operacionSeparada) {
             System.out.println(espacio);
-            if ("+*".contains(espacio)){
+            if ("+*=f".contains(espacio)){
                 switch (espacio){
                     case "+":
-                        System.out.println("\n"+pila.sumar()+"\n\n");;break;
+                        pila.sumar();break;
                     case "*":
-                        System.out.println("\n"+pila.multiplicar()+"\n");break;
+                        pila.multiplicar();break;
+                    case "=":
+                        System.out.println(pila.pop());break;
+                    case "f":
+                        pila.factorial();
+                    default:
+                        System.out.println("Introduce una operacion !!");break;
                 }
             }else{
                 if (espacio.matches("[0-9.]*")){

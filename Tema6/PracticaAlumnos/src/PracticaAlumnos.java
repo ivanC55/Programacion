@@ -8,11 +8,13 @@ import java.util.Scanner;
 public class PracticaAlumnos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        float[][] notasAlumnos = {{-1, -1, -1, 10, 5, -1},
+        float[][] notasAlumnos = {
+                                  {-1, -1, -1, 10, 5, -1},
                                   {5, 4, -1, -1, 5, 6},
-                                  {3, -1, 8, -1, -1, 8}};
+                                  {3, -1, 8, -1, -1, 8}
+                                 };
         //Imprimimos la matriz con las medias incluidas:
-        System.out.print("    \t\tProg\t Bd \tLm\t Fol\t Ent\t Sis\t|| Media\n");
+        System.out.print("      \t\tProg\t Bd \tLm\t Fol\t Ent\t Sis\t|| Media\n");
         for (int i = 0; i < 3; i++) {
             System.out.print("Alumno " + i + " ");
             for (int j = 0; j < 6; j++) {
