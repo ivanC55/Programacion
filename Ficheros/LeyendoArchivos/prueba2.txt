@@ -1,0 +1,4 @@
+Escribiendo con fileWriter
+línea 1
+Escribiendo con bufferedWriter
+linea 2
