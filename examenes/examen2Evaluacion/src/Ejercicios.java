@@ -5,6 +5,67 @@ import java.util.List;
 import java.util.Map;
 
 public class Ejercicios {
+
+    public static void main(String[] args){
+        // Para probar los métodos
+
+        System.out.println("Ejercicio 1:\n...................");
+        char[][] matrizEntrada = {{'1', 'c', 'a'},
+                {'a', '2', '1'},
+                {'a', '2', 'c'}};
+        int[][] matrizSalida;
+
+        /*
+        matrizSalida = obtenerEnteros(matrizEntrada);
+        for (int[] fila: matrizSalida) {
+            for (int celda: fila) {
+                System.out.print(" "+celda+" ");
+            }
+            System.out.println();
+        }
+        */
+        int[] desordenados = { 2, 8, 1, 19, 1, 24};
+        ordenar(desordenados);
+
+        for (int celda: desordenados) {
+            System.out.print(" "+celda+" ");
+        }
+        System.out.println();
+
+
+        System.out.println("\n\n\nEjercicio 2:\n...................");
+        String textoEnClaro = "¿Como llevo el examen? ... chrf cnerpr dhr inf OVRA.";
+
+        //System.out.println( rot13(textoEnClaro) );
+
+
+
+        System.out.println("\n\n\nEjercicio 3:\n...................");
+        System.out.println( "Lleva: " + registrarFalta("Luis", "12-03-2023") + " faltas.");
+        System.out.println( "Lleva: " + registrarFalta("Luis", "13-03-2023") + " faltas.");
+        System.out.println( "Lleva: " + registrarFalta("Luis", "14-03-2023") + " faltas.");
+        System.out.println( "Lleva: " + registrarFalta("Pedro", "12-03-2023") + " faltas.");
+
+        System.out.println( mostrarFaltas("Luis") + " y " + mostrarFaltas("Pedro"));
+
+
+
+        System.out.println("\n\n\nEjercicio 4:\n...................");
+        String texto = "Esto esta bien escrito y leído.\nAdios.";
+        /*
+        ArchivoDaoImp deArchivos = new ArchivoDaoImp();
+        deArchivos.writeAll("archivoEscrito.txt", texto);
+        System.out.println( deArchivos.getAll("archivoEscrito.txt") );
+         */
+        try {
+            System.out.println("Se han escrito " + writeAll("archivo.txt", texto) + " caracteres.");
+            System.out.println("Y leemos...\n" + getAll("archivo.txt"));
+        } catch (Exception e) { e.printStackTrace(); }
+
+    }
+
+
+
     /*public static void main(String[] args) {
         int [] a = {10,9,5,11,30,1};
         ordenar(a);
@@ -39,6 +100,7 @@ public class Ejercicios {
            //Si siguen habiendo lineas sigue leyendo
            while ((linea = br.readLine()) != null){
                 return linea;
+                // Sólo lees la primera línea
            }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -51,6 +113,8 @@ public class Ejercicios {
             FileWriter fw = new FileWriter(f);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(texto);
+            bw.flush();
+            bw.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
