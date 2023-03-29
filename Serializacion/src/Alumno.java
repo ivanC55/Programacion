@@ -1,6 +1,7 @@
 import java.io.Serializable;
 
 public class Alumno implements Serializable {
+    private static final long serialVersionUID = 5L;
     private int edad;
     private String nombre;
     private String curso;
