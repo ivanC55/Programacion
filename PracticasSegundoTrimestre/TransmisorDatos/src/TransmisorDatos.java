@@ -4,33 +4,32 @@ import java.io.IOException;
 
 public class TransmisorDatos {
     public static void main(String[] args) {
-        String archivo;
-        int tamanioTrama, lineaTrama, caracteres;
-        StringBuilder contenidoTrama;
+        //Declaracion variables:
+        String archivo = "tramas.txt";
+        int tamanioTrama = 60;
+        int lineaTrama = 1;
+        //Contador:
+        int caracteres = 0;
+        StringBuilder contenidoTrama = new StringBuilder();
 
-        archivo = "tramas.txt";
-
-        tamanioTrama = 60;
-        lineaTrama = 1;
-        caracteres = 0;
-        contenidoTrama = new StringBuilder();
+        //Leemos archivo:
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             // Leer archivo caracter por caracter
-
             int c;
 
             while ((c = br.read()) != -1) {
-                // Incrementar contador de caracteres
+                // Incrementar contador
                 caracteres++;
 
                 // Agregar caracter a la trama
-                char cha = (char) c;
-                contenidoTrama.append((cha == '\n')?"\\n": (cha == '\r')? "\\r": cha);
+                char caracter = (char) c;
+                contenidoTrama.append((caracter == '\n')?"\\n": (caracter == '\r')? "\\r": caracter);
 
-                // Si llegamos al tamano maximo de la trama, crear objeto Trama y reiniciar variables
+                // Si tamaño maximo de trama, crear Trama y reiniciar
                 if (caracteres == tamanioTrama) {
                     Trama trama = new Trama(contenidoTrama.toString(), lineaTrama);
                     System.out.println("\n"+trama);
+                    //Esperamos 2 segundos
                     Thread.sleep(2000);
                     lineaTrama++;
                     caracteres = 0;
@@ -38,12 +37,11 @@ public class TransmisorDatos {
                 }
             }
 
-            // Si quedan caracteres por agregar a la trama, crear objeto Trama con esos caracteres
+            // Si quedan caracteres por agregar , crear objeto con esos caracteres
             if (caracteres > 0) {
                 Trama trama = new Trama(contenidoTrama.toString(), lineaTrama);
                 System.out.println(trama);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

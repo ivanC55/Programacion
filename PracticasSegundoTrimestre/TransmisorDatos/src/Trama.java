@@ -20,7 +20,7 @@ public class Trama {
         String separador = "|";
         StringBuilder sb = new StringBuilder();
         //Comprobamos si los datos de la trama a leer son menor que 60 y sino rellenamos hasta 60 con " "
-        if (DATOS.length() < 61){
+        if (DATOS.length() < 60){
             for (int i = DATOS.length(); i < 60 ; i++)
                 DATOS += " ";
         }
@@ -28,11 +28,11 @@ public class Trama {
                 .append(Pre).append(separador)
                 .append(SFD).append(separador)
                 .append(DDES).append(separador)
-                .append(DORG).append(separador).append("\n")
+                .append(DORG).append(separador).append("")
                 .append(String.format("%03d", Long)).append(separador)
                 .append(DATOS).append(separador)
                 .append(String.format("%03d", num)).append(separador);
-        return sb.toString();
+                return sb.toString();
 
 
     }

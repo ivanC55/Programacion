@@ -36,7 +36,7 @@ public class Alumno {
         }
         return suma / numModulos;
     }
-    public void imprimirEvaluacion() {
+    public void imprimir() {
         for (String modulo : MODULOS) {
             Float nota = notas.getOrDefault(modulo, -1.0f);
             if (nota == -1.0) {
