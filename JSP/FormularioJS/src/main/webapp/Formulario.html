@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulario</title>
+  <style>
+    #pie{
+      border: solid 5px black;
+      padding: 2em;
+    }
+  </style>
+</head>
+<body>
+  <script>
+
+    $(document).ready(function (){
+      $('#borrar').click(function(event){
+        $('#pie').html('');
+      });
+
+      $('#calcular').click(
+              function (event){
+        let varExpresion = $('#expresion').val();
+        $.get('archivo.txt',{datos : varExpresion},
+                function (responseText){
+                  $('#pie').html(responseText);
+                })
+
+              })
+
+    });
+
+
+  </script>
+  <form action="" method="">
+    <label for="expresion">Introduce una expresion a calcular:</label>
+    <br>
+    <input type="text" name="" id="expresion" value="expresion">
+    <br>
+    <input type="submit" value="Borrar">
+    <br>
+    <input type="submit" value="Calcular">
+  </form>
+</body>
+</html>
