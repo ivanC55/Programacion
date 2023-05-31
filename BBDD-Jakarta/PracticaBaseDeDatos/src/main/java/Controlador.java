@@ -1,3 +1,9 @@
+/**
+ *
+ * @Author: Iván Cerros Brioso
+ *
+ * */
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +13,7 @@ public class Controlador {
     public static void main(String[] args) throws SQLException {
         DAO daoCSV = new DAOImpCSV();
         DAO daoBBDD = new DAOImpMariaDB();
+
         try (Scanner sc = new Scanner(System.in)) {
             String opcion;
             List<Alumno> alumnos = daoCSV.getAll(); // primero de todo cargamos los datos del CSV
@@ -27,6 +34,7 @@ public class Controlador {
                             System.out.println("Alumno : " + (i + 1) + ": " + alumnos.get(i));
                         }
                         break;
+
                     case "2":  // inserta posiciones del CSV en base de datos
                         System.out.println("\nElige el numero/os del alumno/os a insertar a la base de datos");
                         String[] posiciones = sc.nextLine().split(",");
@@ -44,9 +52,9 @@ public class Controlador {
                                 System.out.println("Has introducido una posición erronea: " + posicion);
                             }
                         }
-
                         daoBBDD.addList(seleccionados);
                         break;
+
                     case "3":   // lista alumnos en base de datos
                         List<Alumno> alumnosBBDD = daoBBDD.getAll();
                         System.out.println("\nAlumnos en la base de datos:");
@@ -58,9 +66,9 @@ public class Controlador {
                     case "4":   // elimina alumno de base de datos
                         System.out.println("\nDime el id del alumno que quieres eliminar:");
                         long idAlumno = Long.parseLong(sc.nextLine());
-                        long filasAfectadas = daoBBDD.del(idAlumno);
+                        long filaAfectadas = daoBBDD.del(idAlumno);
 
-                        if (filasAfectadas > 0) {
+                        if (filaAfectadas > 0) {
                             System.out.println("Eliminado el alumno con id " + idAlumno);
                         } else {
                             System.out.println("Ningún alumno con id " + idAlumno);

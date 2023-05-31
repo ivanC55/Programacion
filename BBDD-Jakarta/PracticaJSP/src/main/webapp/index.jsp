@@ -1,15 +1,16 @@
-<%-- -------------------------------------------------------------------------------------------------------------------
-                   Directivas
-----------------------------------------------------------------------------------------------------------------------%>
+<%--
+Directivas
+--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%-- 
-                   HTML--%>
+HTML
+--%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><%= "Calculadora de pila" %></title>
-    <%-- CSS ---------------------------------------------------------------------------------------------------------%>
+    <%-- CSS --%>
     <style>
         .div-center {
             position: absolute;
@@ -18,14 +19,14 @@
             transform: translate(-50%, -50%);
         }
     </style>
-    <%-- ---------------------------------------------------------------------------------------------------------------
-                   2 - javascript - AJAX (con jquery)
-    ------------------------------------------------------------------------------------------------------------------%>
+    <%--
+    javascript/AJAX
+    --%>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(document).ready(function() {
             $('#borrar').click(function (event) {
-                $('#resultado').html("RESULTADO");
+                $('#resultado').html("0.0");
             });
 
             $('#calcular').click(function (event) {
@@ -46,11 +47,6 @@
                         console.log(e)
                     });
             });
-
-            $('#miPrimerServlet').click(function (event) {
-                window.location.href = "escucha-peticiones";
-                //$('#resultado').html("RESULTADO");
-            });
         });
     </script>
 
@@ -59,9 +55,9 @@
 <div class="div-center">
     <h1><%= "Calculadora de pila" %></h1>
 
-    <%-- ---------------------------------------------------------------------------------------------------------------
-                   1 - Formulario
-    ------------------------------------------------------------------------------------------------------------------%>
+    <%--
+    Formulario
+    --%>
     <div style="border: 1px solid black; padding: 1em;">
         <form action="/Calculadora">
             <label>La ecuación a mandar a la calculadora:</label><br />
@@ -70,7 +66,7 @@
         <div>
             <button id="borrar">Borrar</button>&nbsp;
             <button id="calcular">Calcular</button>
-            <h1 id="resultado" style="text-align: right">RESULTADO</h1>
+            <h1 id="resultado" style="text-align: right">0.0</h1>
         </div>
     </div>
 

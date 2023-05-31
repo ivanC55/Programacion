@@ -36,8 +36,8 @@ public class ServletCalculadora extends HttpServlet {
         resultado = calculadora.imprimirResultado(texto);
 
         out.print("<html><body>" +
-                resultado +
-                "</body></html>"
+                resultado
+                + "</body></html>"
         );
     }
 

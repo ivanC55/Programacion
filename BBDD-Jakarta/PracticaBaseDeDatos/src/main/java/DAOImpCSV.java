@@ -81,14 +81,14 @@ public class DAOImpCSV implements DAO {
     }
 
     private static List<Alumno> leerFichero() {
-        FileReader fr = null;
+        FileReader fr;
         try {
             fr = new FileReader("alumnos.csv");
             BufferedReader br = new BufferedReader(fr);
             String encabezado = br.readLine();
             String[] atributos = encabezado.split(",");
             String linea;
-            String[] alumnosAtributos;
+            String[] camposAlumnos;
             List<Alumno> fichero = new ArrayList<>();
             while((linea = br.readLine())!=null) {
                 Long id = null;
@@ -96,21 +96,21 @@ public class DAOImpCSV implements DAO {
                 String email="";
                 String dni="";
                 String fechaNacimiento="";
-                alumnosAtributos = linea.split(",");
-                for(int i=0; i<alumnosAtributos.length; i++) {
+                camposAlumnos = linea.split(",");
+                for(int i=0; i<camposAlumnos.length; i++) {
                     id = (long) i;
                     switch(atributos[i].trim()) {
                         case "nombre":
-                            nombre = alumnosAtributos[i].trim();
+                            nombre = camposAlumnos[i].trim();
                             break;
                         case "email":
-                            email = alumnosAtributos[i].trim();
+                            email = camposAlumnos[i].trim();
                             break;
                         case "dni":
-                            dni = alumnosAtributos[i].trim();
+                            dni = camposAlumnos[i].trim();
                             break;
                         case "fechaNacimiento":
-                            fechaNacimiento = alumnosAtributos[i].trim();
+                            fechaNacimiento = camposAlumnos[i].trim();
                             break;
                     }
                 }
